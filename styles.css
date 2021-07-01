@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+	--yellow:#f9ca24;
+	--white: #fff;
+	--black: #111;
+	--grey: #333;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border:none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+		list-style: none;
+}
+
+html{
+	overflow: hidden;	
+}
+
+body{
+	background: var(--black);
+}
+
+/***********************************************MENU VERTICAL****************************************************/
+.user img {
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+	object-fit: cover;
+	border: .25rem solid var(--yellow);
+	margin: 35px 0px 0px 45px;
+}
+.user .name {
+	font-size: 2rem;
+	text-align: center;
+	color: var(--white);
+}
+section.vertical_bar {
+	z-index: 9;
+}
+
+.navbar{
+	width: 100%;
+}
+
+.user .post {
+	font-size: 1rem;
+	color: var(--white);
+	text-align: center;
+	text-transform: initial;
+}
+
+.wrapper_inner {
+	position: relative;
+	height: 100vh;
+	background: var(--white);
+	border-radius: 25rem;
+	display: flex;
+}
+
+.vertical_wrap{
+	position: relative;
+	height: 100%;
+}
+
+.vertical_bar {
+	width: 15em;
+	background: var(--black);
+	height: 100%;
+	position: relative;
+}
+
+.vertical_bar .menu{
+	padding-left: 3rem;
+}
+
+.vertical_bar .menu li a{
+	margin:.5rem 0;
+	background: var(--grey);
+	display: block;
+	padding: 0.8rem;
+	text-transform: uppercase;
+	color: var(--white);
+	letter-spacing: 0.1rem;
+	border-top-left-radius: 5rem;
+	border-bottom-left-radius: 5rem;
+	margin-bottom: 0.1rem;
+}
+
+.vertical_bar .menu li a .icon{	
+	color: var(--yellow);
+	width: 1.2rem;
+  display: inline-block;
+}
+
+.vertical_bar .menu li a:hover,
+.vertical_bar .menu li a.active{
+	background: var(--white);
+	color: var(--grey);
+}
+
+.vertical_bar .social{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.vertical_bar .social li a{
+	width: 3rem;
+	height:3rem;
+	color: var(--white);
+	border: 0.1rem solid var(--white);
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	margin: 0 0.3rem;
+}
+
+.vertical_bar .social li a:hover{
+	color: var(--yellow);
+	background: var(--white);
+}
+
+/**************************************************NAVEGADOR RESPONSIVE*********************************************/
+.main_container .top_bar {
+	background: var(--black);
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0%;
+}
+
+.top_bar .hamburger{
+	color: var(--white);
+	font-size: 2rem;
+	cursor: pointer;
+	display: none;
+	margin-right: 1rem;
+}
+
+.top_bar .logo{
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	color: var(--yellow);
+}
+
+.top_bar .logo span{
+	color: var(--white);
+}
+/************************************************************MAIN************************************************/
+.main_container .container{
+	scroll-behavior: smooth;
+	padding: 1rem;
+	width: 100%;
+	height: calc(102% - 60px);
+	overflow: auto;
+	background: linear-gradient(150deg, #f9ca24, #111, #333);
+	animation: BgGradient 5s ease infinite;
+	background-size: 400% 300%;
+}
+
+@keyframes BgGradient {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
+
+
+/*****************************************************HOME*******************************************************/
+.btn{
+	padding:.5rem 1rem;
+	background: var(--black);
+	color: var(--white);
+	cursor: pointer;
+	margin-top: 1rem;
+	font-size: 1rem;
+	border-radius: 5rem;
+}
+
+.btn:hover{
+	background:var(--yellow);
+}
+
+.home{
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	padding: 15rem 10rem;
+	width: 100%;
+	height: 105%;
+}
+
+.home h1{
+	font-size:3rem;
+	color: var(--white);
+}
+
+.home h1 span{
+	color:var(--yellow);
+}
+
+.home p{
+	font-size:1.5rem;
+	color: var(--white);
+	padding: 1rem 0;
+	text-transform: initial;
+}
+
+.boxText {
+	display: flex;
+	width: 6rem;
+	height: 0px;
+	color: #fff;
+	line-height: 40px;
+	position: relative;
+	margin: 0.5rem 1rem 2rem 1rem;
+}
+
+.boxText::before {
+    content:'«';
+    position:absolute;
+    left:-30px;
+    line-height:40px;
+  }
+  .boxText::after {
+    content:'»';
+    position:absolute;
+    right:-30px;
+    line-height:40px;
+  }
+  .boxText::after, .boxText::before {
+    color: var(--white);
+    font-size:42px;
+    animation:2s linear 0s normal none infinite opacity;
+    -webkit-animation:2s ease-out 0s normal none infinite opacity;
+    -moz-animation:2s ease-out 0s normal none infinite opacity;
+    -o-animation:2s ease-out 0s normal none infinite opacity;
+  }
+.visible {
+  float:left;
+  font-weight:600;
+  overflow:hidden;
+  height:40px;   
+}
+
+dl {
+	list-style: none;
+	padding-left: 10px;
+	animation: cambiar 7s infinite;
+}
+
+@-webkit-keyframes opacity {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+}
+@keyframes opacity {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes cambiar {
+	
+	0%{ margin-top: 0;}
+	20%{ margin-top: 0;}
+	
+	25% {margin-top: -40px;}
+	50% {margin-top: -40px;}
+	
+	55% {margin-top: -80px;}
+	80% {margin-top: -80px;}
+	
+	85% {margin-top: -40px;}
+	95% {margin-top: -40px;}
+	
+	100% {margin-top: 0;}
+}
+
+/**************************************************ABOUT**********************************************************/
+.row {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	margin: 5% 5% 35% 5%;
+}
+
+.row > .info {
+	width: 100%;
+	padding: 1rem;
+}
+
+.row > .counter:first-child {
+	margin-right: 2rem;
+}
+
+.flexbox-container > div:first-child {
+	margin-right: 2rem;
+}
+
+.counter img {
+	width: 100%;
+	padding-top: 5%;
+}
+h3 {
+	text-align: justify;
+	font-size: 1.3rem;
+}
+
+/***************************************************TITULOS SECCIONES*********************************************/
+.heading{
+    text-align: center;
+    margin:0 0rem;
+    font-size: 3rem;
+    padding:0.5rem;
+    border-bottom: .1rem solid var(--grey);
+    color: var(--white);
+}
+
+.heading span{
+    color:var(--yellow);
+}
+
+/*****************************************************EDUCACION***************************************************/
+.education .box-container {
+	flex-wrap: wrap;
+	padding: 3rem;
+	text-align: justify;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 0.5rem;
+}
+
+section.textBox {
+	justify-content: center;
+}
+
+.education .box-container .p{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.networksLinks i {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    line-height: 6rem;
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--white);
+    background: var(--yellow);
+}
+
+.p{
+	text-transform: initial;
+	color: var(--white);
+}
+
+.networksLinks li {
+	padding: 0rem 3rem 3rem 3rem;
+}
+nav.networksLinks {
+	margin-bottom: 10%;
+}
+
+/***************************************************PORTAFOLIO******************************************************/
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.containerBox{
+	display: block;
+}
+
+h4 {
+	margin-left: 8%;
+	color: var(--white);
+}
+
+.icon {
+	color:var(--yellow);
+}
+
+.icon:hover {
+	color: var(--white);
+}
+.portfolio .box-container .box{
+    height: 20rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box:hover img{
+    transform: scale(1.2);
+}
+/***********************************************************FOOTER********************************************/
+
+hr {
+    color: var(--white);
+    border: solid 0.2rem;
+}
+h3.footer {
+	font-size: 1.2rem;
+	color: var(--white);
+	text-align: center;
+	margin-top: 1%;
+	text-transform: initial;
+}
+
+footer {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/*****************************************************MEDIA QUERIES********************************************/
+@media (min-width: 250px) and (max-width: 600px){
+.home {
+  padding: 2rem;
+  margin-bottom: 13rem;
+}
+.home h1 {
+	font-size: 1.5rem;
+}
+.home p {
+	font-size: 0.8rem;
+}
+.heading {
+	font-size: 1.5rem;
+}
+.row {
+	display: block;
+	margin: 5% 5% 35% 5%;
+}
+h3 {
+	text-align: justify;
+	font-size: 0.8rem;
+}
+.btn {
+	padding: .2rem 0.5rem;
+	font-size: 0.7rem;
+}
+
+.counter img {
+	width: 50%;
+	margin-bottom: 10%;
+}
+section.counter {
+	display: flex;
+	justify-content: center;
+}
+.education .box-container {
+	flex-wrap: wrap;
+	padding: 1rem;
+	text-align: justify;
+}
+.education .box-container .p {
+	font-size: 0.75rem;
+}
+.networksLinks li {
+	padding: 0rem 0rem 0.5rem 0.5rem;
+}
+.networksLinks i {
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	font-size: 3rem;
+	margin-bottom: 20%;
+}
+.portfolio .box-container {
+	padding: 0rem;
+}
+.portfolio .box-container .box {
+	height: 10rem;
+	width: 15rem;
+	margin: 1rem;
+}
+h4 {
+	font-size: 0.8rem;
+}
+h3.footer {
+	font-size: 0.6rem;
+}
+hr {
+	color: var(--white);
+	border: solid 0.1rem;
+}
+.user img {
+  height: 8rem;
+  width: 8rem;
+  margin: 30px 0px 0px 55px;
+}
+.user .name {
+	font-size: 1.5rem;
+}
+.vertical_bar .social {
+	bottom: -2.5rem;
+}
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+	.home {
+    padding: 5rem 5rem;
+    margin-bottom: 20rem;
+}
+.home h1 {
+	font-size: 2rem;
+}
+.home p {
+	font-size: 1rem;
+}
+.heading {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 0.8rem;
+}
+.row {
+	display: flex;
+	margin: 3rem 2rem 35rem 2rem;
+}
+.education .box-container {
+	padding: 2rem;
+}
+.education .box-container .p {
+	font-size: 0.8rem;
+}
+.networksLinks li {
+	padding: 0rem 1rem 1rem 2rem;
+}
+.portfolio .box-container {
+	padding: 0rem;
+}
+h3.footer {
+	font-size: 0.8rem;
+}
+hr {
+	border: solid 0.1rem;
+}
+}
+@media (max-width: 768px){
+.vertical_bar .social {
+	bottom: -2rem;
+}
+.user img {
+	height: 8rem;
+	width: 8rem;
+	margin: 30px 0px 0px 55px;
+}	
+.user .name {
+font-size: 1.3rem;
+text-align: center;
+color: var(--white);
+}
+
+ul {
+	margin-bottom: 0.5rem;
+}
+.top_bar .hamburger{
+		display: inline-block;
+	}
+.vertical_wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		visibility: hidden;
+	}
+.vertical_bar{
+		position: absolute;
+		top: 0;
+		left: -100%; 
+		transition: left 0.2s linear;
+	}
+.vertical_wrap .backdrop{
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 25px;
+		width: 100%;
+		height: 100%;
+	}
+.main_container{
+		width: 100%;
+	}
+.main_container .container .item {
+	padding: 32vh;
+}
+	.wrapper.active .vertical_wrap{
+		visibility: visible;
+	}
+	.wrapper.active .vertical_bar{
+		left: 0;
+		transition: left 0.2s linear;
+	}
+}
